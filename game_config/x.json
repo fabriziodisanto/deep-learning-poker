@@ -1,0 +1,30 @@
+// INPUT
+{
+  hole_cards: [
+    'S4',
+    'SA'
+  ],
+  community_cards: [
+    'SK',
+    'HT',
+    'D5'
+  ],
+  opp_aggression: 0,   // no info
+//  opp_aggression: 1, // checkeo
+//  opp_aggression: 2, // calleo
+//  opp_aggression: 3, // raiseo
+  }
+}
+
+// OUTPUT
+{
+  result: 0 // FOLD
+}
+{
+  result: 1 // CALL
+}
+{
+  result: 2 // RAISE
+}
+
+// si gano o no la mano (signo), cantidad de fichas que gano/perdio (ammount)
