@@ -1,15 +1,17 @@
 // INPUT
 {
   hole_cards: [
-    'S4',
-    'SA'
+    'S4', // 2
+    'SA'  // 4
   ],
   community_cards: [
-    'SK',
-    'HT',
-    'D5'
+    'SK', // 6
+    'HT', // 8
+    'D5'  // 10
+          // 12
+          // 14
   ],
-  opp_aggression: 0,   // no info
+  opp_aggression: 0,   // no info //15
 //  opp_aggression: 1, // checkeo
 //  opp_aggression: 2, // calleo
 //  opp_aggression: 3, // raiseo

@@ -67,17 +67,21 @@ class DLPlayer(BasePokerPlayer):
         return choice_action['action'], amount
 
     @staticmethod
-    def _get_card_id(card):
-        return Card.from_str(card).to_id()
+    def _get_card(card):
+        return Card.from_str(card)
 
     def _get_input_from_state(self, hole_cards, state):
         result = []
         for card in hole_cards:
-            result.append(DLPlayer._get_card_id(card))
+            c = DLPlayer._get_card(card)
+            result.append(c.rank)
+            result.append(c.suit)
         for card in state['community_card']:
-            result.append(DLPlayer._get_card_id(card))
+            c = DLPlayer._get_card(card)
+            result.append(c.rank)
+            result.append(c.suit)
 
-        while len(result) < 7:
+        while len(result) < 14:
             result.append(0)
 
         result.append(DLPlayer._get_aggression_value(self.uuid, state))

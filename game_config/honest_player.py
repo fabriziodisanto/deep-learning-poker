@@ -21,7 +21,7 @@ class MyHonestPlayer(HonestPlayer):
             hole_card=gen_cards(hole_card),
             community_card=gen_cards(community_card)
         )
-        print('{name} win rate is: {win_rate}'.format(name=self.name, win_rate=win_rate))
+        # print('{name} win rate is: {win_rate}'.format(name=self.name, win_rate=win_rate))
         if win_rate >= 0.7:
             action = valid_actions[2]
             action['amount'] = action['amount']['min']
@@ -29,6 +29,5 @@ class MyHonestPlayer(HonestPlayer):
             action = valid_actions[1]
         else:
             action = valid_actions[1]
-        print('{name} action {action}, amount {amount}'.format(name=self.name, action=action['action'],
-                                                               amount=action['amount']))
+        # print('{name} action {action}, amount {amount}'.format(name=self.name, action=action['action'], amount=action['amount']))
         return action['action'], action['amount']
